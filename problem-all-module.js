@@ -494,3 +494,23 @@ function loestNumber(array) {
 const inArray = [25, 52, 45, 22, 11, 31, 12, 86, 91,];
 const outLoestNumber = loestNumber(inArray);
 console.log(outLoestNumber);
+
+// Problem-------------------2
+
+function smallestNumber(a, b, c) {
+    if (a < b && a < c) {
+        return a
+    }
+    else if (b < a && b < c) {
+        return b
+    }
+    else {
+        return c
+    }
+}
+
+const Number1 = 34;
+const Number2 = 24;
+const Number3 = 54;
+const outputNumber = smallestNumber(Number1, Number2, Number3);
+console.log(outputNumber);
