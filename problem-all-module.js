@@ -1,4 +1,4 @@
-// Module - 16 to give you 4 problem . Now solve it-----------------
+// Module - 16 give you 4 problem . Now solve it-----------------
 
 // Problem -------------1
 
@@ -56,7 +56,7 @@ const oparetion = remainder(num1, num2);
 console.log(oparetion);
 
 
-// Module - 17 to give you 4 problem . Now solve it-----------------
+// Module - 17 give you 4 problem . Now solve it-----------------
 
 // problem-----------------1
 
@@ -140,7 +140,7 @@ const Notification = traficSignel(light);
 console.log(Notification);
 
 
-// Module - 18 to give you 4 problem . Now solve it-----------------
+// Module - 18 give you 4 problem . Now solve it-----------------
 
 // Problem--------------1
 
@@ -204,7 +204,7 @@ function retipThemsgREV(msg) {
 console.log(retipThemsgREV('Tumi 100000 bar parbe'));
 
 
-// Module - 19 to give you 4 problem . Now solve it-----------------
+// Module - 19 give you 4 problem . Now solve it-----------------
 
 //Problem-------------1
 
@@ -303,7 +303,7 @@ function make_avg_2(array) {
 const Arrar_num_2 = [23, 45, 56, 67, 78, 89]
 console.log(make_avg(Arrar_num_2));
 
-// Module - 20 to give you 4 problem . Now solve it-----------------
+// Module - 20 give you 4 problem . Now solve it-----------------
 
 // Problem---------------1
 
@@ -393,7 +393,7 @@ const tehArray = [5, 7, 8, 10, 45, 30];
 const outArray = findOddSum(tehArray);
 console.log(outArray);
 
-// Module - 20.5 to give you 4 problem . Now solve it-----------------
+// Module - 20.5 give you 4 problem . Now solve it-----------------
 
 // Problem-------------------1
 // Celsius to Fahrenheit Formula : °F = (°C * 1.8) + 32
@@ -474,3 +474,23 @@ const Rate_c = 5;
 const Time_c = 5;
 const totleInterest_c = CIformula(Principal_c, Rate_c, Time_c);
 console.log(totleInterest_c);
+
+
+// Module - 21  give you 4 problem . Now solve it-----------------
+
+// Problem-------------------1
+
+function loestNumber(array) {
+    let findNumber = array[0];
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+        if (element < findNumber) {
+            findNumber = element;
+        }
+    }
+    return findNumber
+}
+
+const inArray = [25, 52, 45, 22, 11, 31, 12, 86, 91,];
+const outLoestNumber = loestNumber(inArray);
+console.log(outLoestNumber);
