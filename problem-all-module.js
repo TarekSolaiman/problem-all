@@ -476,7 +476,7 @@ const totleInterest_c = CIformula(Principal_c, Rate_c, Time_c);
 console.log(totleInterest_c);
 
 
-// Module - 21  give you 4 problem . Now solve it-----------------
+// Module - 21  give you 5 problem . Now solve it-----------------
 
 // Problem-------------------1
 
@@ -544,3 +544,31 @@ const Length = 15;
 const Hight = 5;
 const Area = areaOFrectangle(Length, Hight);
 console.log(Area);
+
+// Problem------------------5
+
+// console.log("Largest Number in the array is ", largestNum);
+// console.log("Second Largest Number in the array is ", secondLargestNum);
+
+
+function secondLargestNum(array) {
+
+    let lgnum = array[0];
+    let Slgnum = 0;
+
+    for (let i = 1; i < array.length; i++) {
+        if (array[i] > lgnum) {
+            Slgnum = lgnum;
+            lgnum = array[i];
+        }
+        else if (array[i] !== lgnum && array[i] > Slgnum) {
+            Slgnum = array[i];
+        }
+
+    }
+    return Slgnum
+}
+
+const inputArray = [50, 26, 54, 59, 94, 15, 98, 84];
+const secondLargest = secondLargestNum(inputArray);
+console.log(secondLargest);
