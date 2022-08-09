@@ -514,3 +514,33 @@ const Number2 = 24;
 const Number3 = 54;
 const outputNumber = smallestNumber(Number1, Number2, Number3);
 console.log(outputNumber);
+
+// Problem-------------------3
+
+function ArrayAvg(array) {
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+        sum = sum + element;
+    }
+    const avg = sum / array.length;
+    return avg
+}
+
+const arrayinPut = [25, 52, 45, 22, 11, 31, 12, 86, 91,];
+const avg = ArrayAvg(arrayinPut);
+console.log(avg);
+
+// Problem------------------4
+
+function areaOFrectangle(L, H) {
+    const areaLH = L * H
+    let area = Math.pow(areaLH, 2);
+
+    return area
+}
+
+const Length = 15;
+const Hight = 5;
+const Area = areaOFrectangle(Length, Hight);
+console.log(Area);
