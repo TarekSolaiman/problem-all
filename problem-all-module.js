@@ -572,3 +572,92 @@ function secondLargestNum(array) {
 const inputArray = [50, 26, 54, 59, 94, 15, 98, 84];
 const secondLargest = secondLargestNum(inputArray);
 console.log(secondLargest);
+
+// Module - 22  give you 2 problem . Now solve it-----------------
+
+// Problem------------------1
+
+// Problem------------------2
+
+
+// Module - 22.5  give you 5 problem . Now solve it-----------------
+
+// Problem------------------1 
+
+function feetToInch(F) {
+    const feet = 12 * F;
+    return feet
+}
+
+const infeet = 5;
+const outInch = feetToInch(infeet);
+console.log(outInch, 'In');
+
+// Problem------------------2
+
+function centimeterToMeter(C) {
+    const meter = C / 100;
+    return meter
+}
+
+const incentimeter = 1000;
+const outmeter = centimeterToMeter(incentimeter);
+console.log(outmeter, 'm');
+
+// Problem------------------3
+
+function paperRequirements(book1, book2, book3) {
+    const booksPage1 = 100;
+    const booksPage2 = 200;
+    const booksPage3 = 300;
+
+    const firstbook = booksPage1 * book1;
+    const secendbook = booksPage2 * book2;
+    const thardbook = booksPage3 * book3;
+
+    const totlePage = firstbook + secendbook + thardbook;
+    return totlePage
+}
+
+const book1 = 2;
+const book2 = 4;
+const book3 = 5;
+const TotlePage = paperRequirements(book1, book2, book3)
+console.log(TotlePage);
+
+// Problem------------------4
+
+function bestFriend(array) {
+    let friend = array[0];
+    for (let i = 1; i < array.length; i++) {
+        const element = array[i];
+        if (element.length > friend.length) {
+            friend = element;
+        }
+    }
+    return friend
+}
+
+const inFrnd = ['sakib', 'faysal bin nasir', 'rakib', 'mehedi']
+const outBestFrnd = bestFriend(inFrnd);
+console.log(outBestFrnd);
+
+// Problem------------------5
+
+function findPositive(array) {
+    let posetive = [];
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+        if (element > 0) {
+            posetive.push(element);
+        }
+        else {
+            break
+        }
+    }
+    return posetive
+}
+
+const numArray = [50, 26, 54, 59, 94, -15, 98, 84];
+const positive = findPositive(numArray);
+console.log(positive);
