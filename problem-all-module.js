@@ -664,7 +664,7 @@ console.log(positive);
 
 
 
-
+// Prime number ---------------
 
 function isPrime(num) {
 
