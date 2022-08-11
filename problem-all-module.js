@@ -577,6 +577,25 @@ console.log(secondLargest);
 
 // Problem------------------1
 
+function isPrime(num) {
+
+    if (num > 1) {
+        for (var i = 2; i < num; i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+    else {
+        return 'please enter a number greater then 1';
+    }
+
+}
+
+console.log(isPrime(55));
+
+
 // Problem------------------2
 
 
@@ -666,26 +685,129 @@ console.log(positive);
 
 // Prime number ---------------
 
-function isPrime(num) {
 
-    if (num === 2) {
-        return true;
+/* ------------------------------------------\
+           ------Assignment 4------
+\-------------------------------------------*/
+// problem--------1
+
+function radianToDegree(radias) {
+    if (typeof radias === "number") {
+        let digre = radias * (180 / 3.14159)
+        digre = digre.toFixed(2)
+        digre = parseFloat(digre)
+        return digre
     }
-    else if (num > 1) {
-        for (var i = 2; i < num; i++) {
+    else {
+        return "enter The Number";
+    }
+}
+console.log(radianToDegree(10));
+console.log(radianToDegree(25));
+console.log(radianToDegree('jggdfgydygf'));
+console.log(radianToDegree(199));
 
-            if (num % i !== 0) {
-                return true;
-            }
-            else {
-                return false;
-            }
+// problem---------------2
+
+function isJavaScriptFile(filename) {
+    const file = typeof filename;
+    if (file === "string") {
+        if (filename.endsWith('.js') === true) {
+            return true;
+        }
+        else {
+            return false;
         }
     }
     else {
-        return false;
+        return "its not string";
     }
 
 }
 
-console.log(isPrime(55));
+console.log(isJavaScriptFile(65168556));
+console.log(isJavaScriptFile('js.png'));
+console.log(isJavaScriptFile('image.js.png'));
+console.log(isJavaScriptFile('image.png.js'));
+
+// problem----------------3
+
+function oilPrice(D, P, O) {
+    const diesel = 114;
+    const petrol = 130;
+    const octane = 135;
+    if (typeof D === "number" && typeof P === "number" && typeof O === "number") {
+        const dieselPrice = diesel * D;
+        const petrolPrice = petrol * P;
+        const octanePrice = octane * O;
+        const totlePrice = dieselPrice + petrolPrice + octanePrice;
+
+        return totlePrice;
+    }
+    else {
+        return "error";
+    }
+
+}
+
+console.log(oilPrice(1, 1, 1));
+console.log(oilPrice(30, 20, 10));
+console.log(oilPrice("30", 20, 10));
+console.log(oilPrice(1, 0, 2));
+console.log(oilPrice(0, 2, 3));
+
+// problem----------------4
+
+function publicBusFare(howMuch) {
+
+    const bus = 50;
+    const microBus = 11;
+    const publicBus = 250;
+    if (howMuch >= bus && typeof howMuch === "number") {
+        let people = howMuch % bus;
+
+        if (people >= microBus) {
+            people = people % microBus;
+            let publicTiketPrice = people * publicBus;
+            return publicTiketPrice;
+        }
+        else {
+            publicTiketPrice = people * publicBus;
+            return publicTiketPrice;
+        }
+    }
+    else if (howMuch >= microBus && typeof howMuch === "number") {
+        people = howMuch % microBus;
+        publicTiketPrice = people * publicBus;
+        return publicTiketPrice;
+    }
+    else if (typeof howMuch === "number") {
+        publicTiketPrice = howMuch * publicBus
+    }
+    else {
+        return "pleas input a Number";
+    }
+}
+
+console.log(publicBusFare(50));
+console.log(publicBusFare(55));
+console.log(publicBusFare(112));
+console.log(publicBusFare('hfuhififuvb'));
+console.log(publicBusFare(235));
+console.log(publicBusFare(365));
+
+// problem----------------5
+
+function isBestFriend(obj1, obj2) {
+    if (obj1.name === obj2.friend && obj2.name === obj1.friend && typeof obj1, obj2 === "object") {
+        return "friend";
+    }
+    else if (typeof obj1, obj2 === "object") {
+        return "Not friend";
+    }
+    else {
+        return "Write a Object";
+    }
+}
+
+console.log(isBestFriend(2343, { name: "sobuj", friend: "faysal" }));
