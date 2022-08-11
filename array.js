@@ -171,3 +171,23 @@ function ticketPrice(quantity) {
 const quantityOfNeed = 300;
 const totlePriceIn = ticketPrice(quantityOfNeed);
 console.log('Totle price', totlePriceIn);
+
+
+
+function radianToDegree(radias) {
+    if (typeof radias === "number") {
+        let digre = radias * (180 / 3.14159)
+        digre = digre.toFixed(2) /* After desimal tow posititon*/
+        digre = parseFloat(digre) /* string to desimal*/
+        return digre
+    }
+    else {
+        return "enter The Number";
+    }
+}
+
+
+console.log(radianToDegree(10));
+console.log(radianToDegree(25));
+console.log(radianToDegree('jggdfgydygf'));
+console.log(radianToDegree(199));
