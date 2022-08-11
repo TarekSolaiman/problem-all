@@ -799,15 +799,19 @@ console.log(publicBusFare(365));
 // problem----------------5
 
 function isBestFriend(obj1, obj2) {
-    if (obj1.name === obj2.friend && obj2.name === obj1.friend && typeof obj1, obj2 === "object") {
-        return "friend";
+    if (obj1.name === obj2.friend && obj2.name === obj1.friend && typeof obj1 === "object" && typeof obj2 === "object") {
+        return true;
     }
-    else if (typeof obj1, obj2 === "object") {
-        return "Not friend";
+    else if (typeof obj1 === "object" && typeof obj1 === "object" && typeof obj2 === "object") {
+        return false;
     }
     else {
-        return "Write a Object";
+        return "Write a object";
     }
 }
 
-console.log(isBestFriend(2343, { name: "sobuj", friend: "faysal" }));
+console.log(isBestFriend({ name: "abul", friend: "babul" }, { name: "babul", friend: "abul" }));
+console.log(isBestFriend({ name: "abul", friend: "kabul" }, { name: "kabul", friend: "sabul" }));
+console.log(isBestFriend({ name: "deo", friend: "alex" }, { name: "deo", friend: "jhon" }));
+console.log(isBestFriend({ name: "abul", friend: "habul" }, { name: "habul", friend: "abul" }));
+console.log(isBestFriend(3773, { name: "habul", friend: "abul" }));
